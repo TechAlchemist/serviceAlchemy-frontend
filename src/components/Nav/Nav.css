@@ -1,0 +1,15 @@
+.navbar {
+   background-color: #fd493e !important;
+}
+
+.navbar-text {
+   color: white !important;
+}
+
+.nav-item {
+   padding-right: 10px;
+}
+
+a.link:hover {
+   text-decoration: none;
+}
