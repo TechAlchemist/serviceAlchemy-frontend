@@ -1,13 +1,12 @@
 import SideBar from '../../components/SideBars/CustomerSideBar';
 import BannerImage from '../../components/BannerImage/BannerImage';
+import FeaturedArticle from '../../components/FeaturedArticle/FeaturedArticle';
 
 const Dashboard = (props) => {
     
     return (
         <>
-
-        <BannerImage />
-        
+                
         <div className="container-fluid">
     
             <div className="row">
@@ -17,7 +16,7 @@ const Dashboard = (props) => {
                 <SideBar />
 
                 <div className="col-sm-9">
-                    <h1 className="page-header">Home Page</h1>
+                    <FeaturedArticle />
                 </div>
 
             </div>

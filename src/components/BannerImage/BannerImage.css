@@ -1,6 +1,6 @@
-.jumbotron {
-    background-image: url('banner.png');
-    height: 60vh !important;
+#banner {
+    background-image: url('newBanner.gif');
+    height: 100vh !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;

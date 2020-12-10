@@ -1,5 +1,5 @@
 import "./Nav.css";
-import logo from  '../../logoV3.gif';
+import logo from  '../../logoV4.gif';
 import { Link } from 'react-router-dom';
 // import { camelCase } from '../../services/helperFunctions';
 

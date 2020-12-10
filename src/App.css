@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
 body {
-  background-color: #7a7c81;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Nanum Gothic Coding', monospace;
 }

@@ -1,6 +1,21 @@
-#about {
+#home {
     padding: 100px;
+    background-color: white;
     /* display: flex; */
     /* justify-content: right; */
     /* align-items: center; */
+}
+#home-logo {
+    padding-bottom: 20px;
+}
+#testimony-title {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.testimony-content {
+    margin-bottom: 100px;
+}
+.testimony {
+    margin: 20px;
 }

@@ -4,7 +4,7 @@ import './BannerImage.css';
 const BannerImage = (props) => {
 
     return (
-        <div className="jumbotron jumbotron-fluid"></div>
+        <div className="jumbotron jumbotron-fluid" id='banner'></div>
     );
 }
 
