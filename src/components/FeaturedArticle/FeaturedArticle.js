@@ -3,11 +3,17 @@ const FeaturedArticle = (props) => {
     
     return (
         <>
-            <h1 className="page-header">Home Page</h1>
+            <h1 className="page-header">Dashboard</h1>
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h1>Bootstrap Tutorial</h1>      
-                    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+                    <h1> Learning to use Zoom. </h1>      
+                    <p> Some quick tips to become a Zoom guru. </p>
+                    <ol>
+                        <li> Change your background. </li> 
+                        <li> Mute your audio and turn off your camera by default. </li>
+                        <li> Mute and unmute with the space bar. </li>
+                        <li>  Turn on the beauty filter. </li>
+                    </ol>
                 </div>
             </div>
         </>

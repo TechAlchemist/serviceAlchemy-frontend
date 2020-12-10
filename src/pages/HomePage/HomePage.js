@@ -12,7 +12,7 @@ const HomePage = (props) => {
                         <h2>Welcome, Home.</h2>
                         <br/>
                         <h4> 
-                            Is your computer slow? Can't send an email? Spill water on your laptop and then 'accidentally' drop it in the mud? Good! Service Alchemy is the one stop shop to get help from your companies IT Services. Your companies IT Services wants to help you as best they can and we want to help them do it. Service Alchemy exists to transmute lackluster customer service into cutting edge, easy to use MAGIC! 
+                            Is your computer slow? Can't send an email? Spill water on your laptop and then 'accidentally' drop it in the mud? Good! Service Alchemy is your medium to get help from your companies IT Services. Your companies IT Services wants to help you as best they can. We want to help them do it. Service Alchemy exists to transmute lackluster customer service into cutting edge, easy to use MAGIC! 
                         </h4>
                         <br/>
                         <button className="btn btn-default btn-lg">Register Now</button>

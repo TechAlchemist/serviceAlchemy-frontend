@@ -1,6 +1,7 @@
-import SideBar from '../../components/SideBars/CustomerSideBar';
+import CustomerSideBar from '../../components/SideBars/CustomerSideBar';
 import BannerImage from '../../components/BannerImage/BannerImage';
 import FeaturedArticle from '../../components/FeaturedArticle/FeaturedArticle';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 const Dashboard = (props) => {
     
@@ -13,9 +14,10 @@ const Dashboard = (props) => {
             
                 {/* TODO Add conditional render depending on users auth level. */}
                 
-                <SideBar />
+                <CustomerSideBar />
 
                 <div className="col-sm-9">
+
                     <FeaturedArticle />
                 </div>
 
