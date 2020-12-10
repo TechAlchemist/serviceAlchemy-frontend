@@ -76,7 +76,7 @@ function App(props) {
         <Route
           exact path="/dashboard/newTicket"
           render={(props) => (
-            < CustomerNewTicketPage />
+            < CustomerNewTicketPage user={userState.user}/>
           )}
         />
         <Route component={NotFoundPage} />
