@@ -1,10 +1,12 @@
 import CustomerSideBar from '../../components/SideBars/CustomerSideBar';
-import BannerImage from '../../components/BannerImage/BannerImage';
+// import BannerImage from '../../components/BannerImage/BannerImage';
 import FeaturedArticle from '../../components/FeaturedArticle/FeaturedArticle';
-import { Route, Switch, Redirect } from 'react-router-dom';
+// import { Route, Switch, Redirect } from 'react-router-dom';
 
 const Dashboard = (props) => {
-    
+
+
+
     return (
         <>
                 
@@ -12,7 +14,6 @@ const Dashboard = (props) => {
     
             <div className="row">
             
-                {/* TODO Add conditional render depending on users auth level. */}
                 
                 <CustomerSideBar />
 

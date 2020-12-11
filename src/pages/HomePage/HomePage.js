@@ -6,9 +6,9 @@ const HomePage = (props) => {
     return (
         <>
             <BannerImage />
-            <div id="home" class="container-fluid">
+            <div id="home" className="container-fluid">
                 <div className='row'>
-                    <div class="col-sm-8">
+                    <div className="col-sm-8">
                         <h2>Welcome, Home.</h2>
                         <br/>
                         <h4> 
@@ -42,11 +42,12 @@ const HomePage = (props) => {
                             </p>
                         </div>
                         <div  className='testimony'>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+
                             <br/>
                             <em> 5 of 5 </em>
                         </div>
@@ -58,13 +59,13 @@ const HomePage = (props) => {
                             <p> I would use this. It looks so easy to use, yet so powerful. Alright, is that all you wanted me to say? Get lost kid. </p>
                         </div>
                         <div  className='testimony'>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <br/>
-                            <em> 5 of 5 </em>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+
+                            <em> 55 of 5 </em>
                         </div>
                     </div>
                     <div className="col-sm-4">
@@ -74,11 +75,11 @@ const HomePage = (props) => {
                             <p> Man, how did you get in my house! Get out! I'm calling the police right now! No, I won't review your web app! LEAVE!!! </p>
                         </div>
                         <div className='testimony'>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
-                            <img src="https://img.icons8.com/windows/32/000000/star--v2.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
+                            <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
                             <br/>
                             <em> 5 of 5 </em>
                         </div>

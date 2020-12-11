@@ -46,7 +46,8 @@ function App(props) {
         <Route
           exact path="/dashboard"
           render={(props) =>
-            getUser() ? <DashboardPage /> : <Redirect to="/login" />
+            getUser() ? <DashboardPage user={userState.user} /> : <Redirect to="/login" 
+            />
           }
         />
         <Route
@@ -64,13 +65,13 @@ function App(props) {
         <Route
           exact path="/dashboard/openTickets"
           render={(props) => (
-            < CustomerOpenTicketsPage />
+            < CustomerOpenTicketsPage user={userState.user} />
           )}
         />
         <Route
           exact path="/dashboard/closedTickets"
           render={(props) => (
-            < CustomerClosedTicketsPage />
+            < CustomerClosedTicketsPage user={userState.user}/>
           )}
         />
         <Route

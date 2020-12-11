@@ -4,8 +4,8 @@ const FeaturedArticle = (props) => {
     return (
         <>
             <h1 className="page-header">Dashboard</h1>
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
+            <div className="jumbotron jumbotron-fluid">
+                <div className="container">
                     <h1> Learning to use Zoom. </h1>      
                     <p> Some quick tips to become a Zoom guru. </p>
                     <ol>

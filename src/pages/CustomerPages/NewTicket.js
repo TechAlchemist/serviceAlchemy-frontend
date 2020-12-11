@@ -21,6 +21,7 @@ const CustomerNewTicket = (props) => {
 
     function updateMessage(msg) {
         setMessageState({message: msg});
+        console.log(messageState);
     }
     
     function handleChange(e) {

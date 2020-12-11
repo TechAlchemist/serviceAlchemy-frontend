@@ -1,7 +1,8 @@
+// import { getToken } from './tokenService';
 const BASE_URL = 'http://localhost:3001/api/tickets/';
+const temp = 'http://localhost:3001/api/tickets/myTickets';
 
 function submitTicket(ticket) {
-    console.log(ticket);
     return fetch(BASE_URL + 'newTicket', {
         method: 'POST',
         headers: new Headers({'Content-Type': 'application/json'}),
@@ -14,6 +15,17 @@ function submitTicket(ticket) {
     })
 }
 
+function fetchMyTickets(userId) {
+    console.log('fetchMyTickets from ticketService was called. ')
+    const options = {
+        method: 'GET',
+        headers: new Headers({userId: userId})
+      };
+      return fetch(temp, options).then(res => res.json());
+}
+
 export {
-    submitTicket
+    submitTicket,
+    fetchMyTickets
 };
+

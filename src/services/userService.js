@@ -1,4 +1,4 @@
-import {setToken, getToken, getUserFromToken, removeToken} from './tokenService';
+import {setToken, getUserFromToken, removeToken} from './tokenService';
 
 const BASE_URL = 'http://localhost:3001/api/users/';
 
