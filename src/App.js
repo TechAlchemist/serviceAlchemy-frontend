@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Nav from "./components/Nav/Nav";
+import CustomerOpenTicket from './components/CustomerOpenTicket/CustomerOpenTicket';
 
 
 import HomePage from "./pages/HomePage/HomePage";
@@ -65,8 +66,16 @@ function App(props) {
         <Route
           exact path="/dashboard/openTickets"
           render={(props) => (
-            < CustomerOpenTicketsPage user={userState.user} />
+            < CustomerOpenTicketsPage user={userState.user} {...props}/>
           )}
+        />
+        <Route
+          exact path="/dashboard/openTickets/:ticketId"
+          component={CustomerOpenTicket}
+        />
+        <Route
+          exact path="/dashboard/openTickets/:ticketId/update"
+          component={CustomerOpenTicket}
         />
         <Route
           exact path="/dashboard/closedTickets"
@@ -77,7 +86,7 @@ function App(props) {
         <Route
           exact path="/dashboard/newTicket"
           render={(props) => (
-            < CustomerNewTicketPage user={userState.user}/>
+            < CustomerNewTicketPage user={userState.user} {...props}/>
           )}
         />
         <Route component={NotFoundPage} />

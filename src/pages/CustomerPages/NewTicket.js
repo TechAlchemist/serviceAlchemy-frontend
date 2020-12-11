@@ -2,8 +2,11 @@ import CustomerSideBar from '../../components/SideBars/CustomerSideBar';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { submitTicket } from '../../services/ticketService'
+import { useHistory } from 'react-router-dom';
 
 const CustomerNewTicket = (props) => {
+
+    const history = useHistory();
 
     const [formState, setFormState] = useState({
         ticketTitle: '',
@@ -14,14 +17,14 @@ const CustomerNewTicket = (props) => {
         
 
       });
-
+    // eslint-disable-next-line
     const [messageState, setMessageState] = useState({
         msg: ''
     });
 
     function updateMessage(msg) {
         setMessageState({message: msg});
-        console.log(messageState);
+       
     }
     
     function handleChange(e) {
@@ -36,9 +39,8 @@ const CustomerNewTicket = (props) => {
     async function handleSubmit (e) {
         e.preventDefault();
         try {
-          
-          await submitTicket(formState);
-          props.history.push('/dashboard');
+            history.push('/dashboard');
+            await submitTicket(formState);
         } catch (err) {
           // Invalid ticket data
           updateMessage(err.message);
