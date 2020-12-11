@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Nav from "./components/Nav/Nav";
 import CustomerOpenTicket from './components/CustomerOpenTicket/CustomerOpenTicket';
-
+import CustomerOpenTicketUpdate from './components/CustomerOpenTicket/CustomerOpenTicketUpdate';
 
 import HomePage from "./pages/HomePage/HomePage";
 import DashboardPage from "./pages/DashboardPage/Dashboard";
@@ -12,6 +12,7 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import CustomerOpenTicketsPage from './pages/CustomerPages/OpenTickets';
 import CustomerClosedTicketsPage from './pages/CustomerPages/ClosedTickets';
 import CustomerNewTicketPage from './pages/CustomerPages/NewTicket';
+
 
 
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
@@ -75,7 +76,7 @@ function App(props) {
         />
         <Route
           exact path="/dashboard/openTickets/:ticketId/update"
-          component={CustomerOpenTicket}
+          component={CustomerOpenTicketUpdate}
         />
         <Route
           exact path="/dashboard/closedTickets"

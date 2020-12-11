@@ -1,8 +1,6 @@
 // import { getToken } from './tokenService';
 const BASE_URL = 'http://localhost:3001/api/tickets/';
-const temp = 'http://localhost:3001/api/tickets/myTickets';
-const temp2 = 'http://localhost:3001/api/tickets/singleTicket';
-const temp3 = 'http://localhost:3001/api/tickets/deleteTicket';
+
 
 
 function submitTicket(ticket) {
@@ -24,7 +22,7 @@ function fetchMyTickets(userId) {
         method: 'GET',
         headers: new Headers({userId: userId})
       };
-      return fetch(temp, options).then(res => res.json());
+      return fetch(BASE_URL + 'myTickets', options).then(res => res.json());
 }
 
 function fetchSingleTicket(ticketId) {
@@ -32,7 +30,7 @@ function fetchSingleTicket(ticketId) {
         method: 'GET',
         headers: new Headers({ticketId: ticketId})
       };
-      return fetch(temp2, options).then(res => res.json());
+      return fetch(BASE_URL + 'singleTicket', options).then(res => res.json());
 }
 
 function deleteSingleTicket(ticketId) {
@@ -40,13 +38,32 @@ function deleteSingleTicket(ticketId) {
         method: 'DELETE',
         headers: new Headers({ticketId: ticketId})
     };
-    return fetch(temp3, options).then(res => res.json());
+    return fetch(BASE_URL + 'deleteTicket', options).then(res => res.json());
+}
+
+function updateSingleTicket(ticketBody, ticketId) {
+    return fetch(BASE_URL + 'updateTicket', {
+        method: 'POST',
+        headers: new Headers(
+        {
+            'Content-Type': 'application/json',
+            ticketId: ticketId
+        
+        }),
+        body: JSON.stringify(ticketBody)
+    })
+    .then(res => {
+        if (res.ok) return res.json();
+
+        throw new Error('something went wrong ticketService.js line 12');
+    })
 }
 
 export {
     submitTicket,
     fetchMyTickets,
     fetchSingleTicket,
-    deleteSingleTicket
+    deleteSingleTicket,
+    updateSingleTicket
 };
 

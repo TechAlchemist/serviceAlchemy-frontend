@@ -41,7 +41,7 @@ const CustomerOpenTickets = (props) => {
                         <br/>
                         Created:{new Date(ticket.createdAt).toLocaleDateString()}
                         <br />
-                        
+                        <Link to={`/dashboard/openTickets/${ticket._id}/update`}> Update Ticket </Link>
                         <hr/>
                         </div>
                     )}
