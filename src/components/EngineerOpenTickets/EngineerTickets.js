@@ -1,12 +1,13 @@
-import { fetchSingleTicket } from '../../services/ticketService';
+import { fetchSingleTicket, claimTicket } from '../../services/ticketService';
 import { useState, useEffect } from "react";
 import EngineerSideBar from '../../components/SideBars/EngineerSideBar';
+
 
 import Modal from '../Modal/DeleteTicketModal';
 
 const EngineerTicketDetails = (props) => {
 
-    console.log(props.match)
+    const engineerId = props.location.engineerId;
 
     const [ticket, setTicket] = useState([]);
 
@@ -39,13 +40,26 @@ const EngineerTicketDetails = (props) => {
         }
     }
 
+    async function handleClaimSubmit() {
+        if (engineerId === 'undefined' || ticket[0]._id === 'undefined') {
+            console.error('Undefined Error in submission. ');
+        }
+        else {
+            await claimTicket(engineerId, ticket[0]._id);
+        }
+    }
+
+    function areHeadersValid() {
+        return !(engineerId && ticket[0]._id);
+      }
+
     return (
         <div className="container-fluid">
 
             <div className="row">   
             <EngineerSideBar  />
                 <div className="col-sm-9">
-                    <h1> Service Alchemy Ticket Queue </h1>
+                    
                     {ticket && ticket.map((ticket, idx) => 
 
                         <div className="card" id="card" key={idx}>
@@ -58,8 +72,9 @@ const EngineerTicketDetails = (props) => {
                             <div className="card-body">
                                 <h5 className="card-title">{ticket.ticketTitle}</h5>
                                 <p className="card-text">{ticket.ticketDescription}</p>
+                                <p className="card-text">{`- From ${ticket.ticketCreatorName} in ${ticket.ticketCreatorBusinessUnit}`}</p>
                                 <footer className="blockquote-footer">Created: <cite title="Source Title"> {new Date(ticket.createdAt).toLocaleDateString()} </cite></footer>
-                                <button disabled="disabled">Fart</button>
+                                <button disabled={areHeadersValid()} onClick={handleClaimSubmit}>Take Ticket</button>
                             </div>
                         </div>
 

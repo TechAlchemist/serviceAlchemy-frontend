@@ -1,9 +1,11 @@
 import './Ticket.css';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+
 
 const Ticket = (props) => {
     const ticket = props.ticket;
-
+    const engineerId = props.user._id;
+    console.log('engineer id here ' + engineerId);
     function priorityColor(priority) {
         switch (priority) {
             case 1: 
@@ -29,7 +31,7 @@ const Ticket = (props) => {
         if (props.user.authLevel === 'engineer') {
             return (
                 <>
-                    <Link to={`/dashboard/ticketDetails/${ticket._id}`}> Details </Link> 
+                    <Link to={{pathname: `/dashboard/ticketDetails/${ticket._id}`, engineerId : engineerId}}> Details </Link> 
                 </>
             )
         }

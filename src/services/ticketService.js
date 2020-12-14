@@ -62,8 +62,21 @@ function updateSingleTicket(ticketBody, ticketId) {
     .then(res => {
         if (res.ok) return res.json();
 
-        throw new Error('something went wrong ticketService.js line 12');
+        throw new Error('something went wrong in ticketService');
     })
+}
+
+function claimTicket(engineerId, ticketId) {
+    return fetch(BASE_URL + 'claimTicket', {
+        method: 'POST',
+        headers: new Headers(
+        {
+            ticketId: ticketId,
+            engineerId: engineerId
+        }),
+       
+    })
+
 }
 
 export {
@@ -72,6 +85,7 @@ export {
     fetchSingleTicket,
     deleteSingleTicket,
     updateSingleTicket,
-    fetchOpenTickets
+    fetchOpenTickets,
+    claimTicket
 };
 

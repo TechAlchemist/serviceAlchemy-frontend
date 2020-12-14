@@ -59,9 +59,7 @@ const CustomerOpenTicket = (props) => {
         if (formState.ticketDescription === '' && formState.ticketTitle.length > 0) {
             updatedTicket.ticketDescription = ticket[0].ticketDescription;
         }
-        // console.log('investigating ticketTitle' + ticket[0].ticketTitle);
         
-        console.log(updatedTicket);
         try {
             history.push('/dashboard');
             await updateSingleTicket(updatedTicket, ticket[0]._id);

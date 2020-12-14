@@ -81,7 +81,9 @@ function App(props) {
         />
         <Route
           exact path="/dashboard/ticketDetails/:ticketId"
+          
           component={EngineerTickets}
+
         />
         <Route
           exact path="/dashboard/closedTickets"
