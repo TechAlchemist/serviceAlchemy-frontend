@@ -25,12 +25,12 @@ const Modal = (props) => {
 
                 {/* <!-- Modal Header --> */}
                 <div className="modal-header">
-                    <h4 className="modal-title">{camelCase(props.ticket.ticketType)}&nbsp;-&nbsp;{props.ticket.ticketTitle}</h4>
+                    <h4 className="modal-title">{props.ticket.ticketType}&nbsp;-&nbsp;{props.ticket.ticketTitle}</h4>
                     <button type="button" className="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 {/* <!-- Modal body --> */}
-                <div className="modal-body">
+                <div className="modal-body" style={{color: 'black'}}>
                     Hey there, are you sure you want to do this? You'll be deleting the {props.ticket.ticketType} you submitted on {new Date(props.ticket.createdAt).toLocaleDateString()}. This means a Support Engineer will NOT be reaching out. 
                 </div>
 

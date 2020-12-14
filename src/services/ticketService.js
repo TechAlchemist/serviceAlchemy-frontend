@@ -17,12 +17,19 @@ function submitTicket(ticket) {
 }
 
 function fetchMyTickets(userId) {
-    console.log('fetchMyTickets from ticketService was called. ')
     const options = {
         method: 'GET',
         headers: new Headers({userId: userId})
       };
       return fetch(BASE_URL + 'myTickets', options).then(res => res.json());
+}
+
+function fetchOpenTickets() {
+    console.log('fetchMyTickets from ticketService was called. ')
+    const options = {
+        method: 'GET'
+      };
+      return fetch(BASE_URL + 'openTickets', options).then(res => res.json());
 }
 
 function fetchSingleTicket(ticketId) {
@@ -64,6 +71,7 @@ export {
     fetchMyTickets,
     fetchSingleTicket,
     deleteSingleTicket,
-    updateSingleTicket
+    updateSingleTicket,
+    fetchOpenTickets
 };
 

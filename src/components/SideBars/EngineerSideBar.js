@@ -4,25 +4,22 @@ import { Link } from 'react-router-dom';
 
 const SideNav = (props) => {
   
+  const activeLinkSrc = 'https://img.icons8.com/ios/50/000000/water-bottle.png';
 
   return (
     // <>
-    <div className="col-sm-3">
-      <h1> Egnineer Sidebar </h1>
-      <ul className="list-group list-group-flush">
-        <li className="list-group-item">
-            <div className="card">
-                SLA Warning
-            </div>
-        </li>
+    <div className="col-sm-3" id="sidebar">
+      
+      <div className="card" id="nav-card">
+        <p> SLA STATUS </p>
+      </div>
 
-        <li className="list-group-item">
-          <div className="card">
-          <Link to='/'>
+          <div className="card" id="nav-card">
+            <Link to='/dashboard/openTickets'>
               {
-              props.active === 'closedTickets' ?
+              props.active === 'openTickets' ?
                 <p id='active'>
-                  <img alt='active link icon' src="https://img.icons8.com/ios-filled/24/000000/here.png"/>
+                  <img alt="active link" src={activeLinkSrc} />
                   &nbsp;Current Tickets 
                 </p>
               :
@@ -30,57 +27,35 @@ const SideNav = (props) => {
               } 
             </Link>
           </div>
-        </li>
 
-        <li className="list-group-item">
-          <div className="card">
+          <div className="card" id="nav-card">
+          <Link to='/dashboard/closedTickets'>
+              {
+              props.active === 'closedTickets' ?
+                <p id='active'>
+                  <img alt='active link icon' src={activeLinkSrc}/>
+                  &nbsp;Closed Tickets
+                </p>
+              :
+              <p> &nbsp;Closed Tickets </p>  
+              } 
+            </Link>
+          </div>
+
+          <div className="card" id="nav-card">
           <Link to='/dashboard/newTicket'>
               {
               props.active === 'newTicket' ?
                 <p id='active'>
-                  <img alt='active link icon' src="https://img.icons8.com/ios-filled/24/000000/here.png"/>
-                  &nbsp;Completed Tickets 
+                  <img alt='active link icon' src={activeLinkSrc}/>
+                  &nbsp;Satisfaction Surveys 
                 </p>
               :
-              <p> &nbsp;Completed Tickets </p>  
+              <p> &nbsp;Satisfaction Surveys </p>  
               } 
             </Link>
           </div>
-        </li>
 
-        <li className="list-group-item">
-          <div className="card">
-          <Link to='/dashboard/newTicket'>
-              {
-              props.active === 'newTicket' ?
-                <p id='active'>
-                  <img alt='active link icon' src="https://img.icons8.com/ios-filled/24/000000/here.png"/>
-                  &nbsp;Satisfaction Ratings 
-                </p>
-              :
-              <p> &nbsp;Satisfaction Ratings </p>  
-              } 
-            </Link>
-          </div>
-        </li>
-
-        <li className="list-group-item">
-          <div className="card">
-          <Link to='/dashboard/newTicket'>
-              {
-              props.active === 'newTicket' ?
-                <p id='active'>
-                  <img alt='active link icon' src="https://img.icons8.com/ios-filled/24/000000/here.png"/>
-                  &nbsp;Customer Chat 
-                </p>
-              :
-              <p> &nbsp;Customer Chat </p>  
-              } 
-            </Link>
-          </div>
-        </li>
-
-      </ul>
 
    </div>
   );

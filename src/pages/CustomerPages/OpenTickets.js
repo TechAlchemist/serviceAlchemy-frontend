@@ -31,7 +31,7 @@ const CustomerOpenTickets = (props) => {
                     <h1 id="title"> Customer Open Tickets </h1>
                         <div className="container" id="ticket-container">
                             {tickets && tickets.map((ticket, idx) => 
-                                <Ticket key={idx} ticket={ticket}/> 
+                                <Ticket key={idx} ticket={ticket} user={props.user} /> 
                             )}
                         </div>
                     </div>

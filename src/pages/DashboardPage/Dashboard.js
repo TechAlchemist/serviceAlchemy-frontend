@@ -17,7 +17,7 @@ const Dashboard = (props) => {
             return <FeaturedArticle />;
         }
         else if (props.user.authLevel === 'engineer') {
-            return <TicketQueue />
+            return <TicketQueue user={props.user}/>
         }
         else {
             return <ManagerVisuals />
@@ -39,7 +39,7 @@ const Dashboard = (props) => {
     
             <div className="row">
                 {sideBarLevel()}
-                <div className="col-sm-9" id="test">
+                <div className="col-sm-9">
                     { dashboardLevel() }
                 </div>
 

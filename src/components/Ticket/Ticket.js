@@ -18,10 +18,29 @@ const Ticket = (props) => {
     }
 
     function ticketTypeLogo(type) {
-        return type === 'incident' ? 
+        return type === 'Incident' ? 
         "https://img.icons8.com/ios/50/000000/medium-risk.png" 
         :
         "https://img.icons8.com/pastel-glyph/64/000000/bell-service--v2.png"
+    }
+
+    // determine what the current user can do to the ticket
+    function availableActions() {
+        if (props.user.authLevel === 'engineer') {
+            return (
+                <>
+                    <Link to={`/dashboard/ticketDetails/${ticket._id}`}> Details </Link> 
+                </>
+            )
+        }
+        else {
+            return (
+                <>
+                    <Link to={`/dashboard/openTickets/${ticket._id}`}> Details </Link> 
+                    <Link to={`/dashboard/openTickets/${ticket._id}/update`}> Update </Link> 
+                </>
+            )
+        }
     }
 
     return (
@@ -37,8 +56,7 @@ const Ticket = (props) => {
                     <h5 className="card-title">{ticket.ticketTitle}</h5>
                     <p className="card-text"></p>
                     <footer className="blockquote-footer">Created: <cite title="Source Title"> {new Date(ticket.createdAt).toLocaleDateString()} </cite></footer>
-                    <a className="card-link"> <Link to={`/dashboard/openTickets/${ticket._id}`}> Details </Link> </a>
-                    <a className="card-link"> <Link to={`/dashboard/openTickets/${ticket._id}`}> Update </Link> </a>
+                    {availableActions()}
                 </div>
             </div>
         </>

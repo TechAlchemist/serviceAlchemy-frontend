@@ -13,7 +13,10 @@ const CustomerNewTicket = (props) => {
         ticketDescription: '',
         ticketType: '',
         ticketPriority: '',
-        ticketCreator: props.user._id
+        ticketCreator: props.user._id,
+        ticketCreatorBusinessUnit: props.user.businessUnit,
+        ticketCreatorContact: props.user.email,
+        ticketCreatorName: props.user.firstName + ' ' + props.user.lastName
         
 
       });

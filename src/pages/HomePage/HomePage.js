@@ -65,7 +65,7 @@ const HomePage = (props) => {
                             <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
                             <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
 
-                            <em> 55 of 5 </em>
+                            <em> 5 of 5 </em>
                         </div>
                     </div>
                     <div className="col-sm-4">
