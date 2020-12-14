@@ -1,6 +1,4 @@
-import {camelCase} from '../../services/helperFunctions';
 import { deleteSingleTicket } from '../../services/ticketService';
-import { Redirect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 const Modal = (props) => {

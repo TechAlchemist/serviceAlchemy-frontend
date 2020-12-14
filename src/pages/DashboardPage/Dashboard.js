@@ -1,11 +1,8 @@
 import CustomerSideBar from '../../components/SideBars/CustomerSideBar';
 import EngineerSideBar from '../../components/SideBars/EngineerSideBar';
-
-// import BannerImage from '../../components/BannerImage/BannerImage';
 import FeaturedArticle from '../../components/FeaturedArticle/FeaturedArticle';
 import TicketQueue from '../../components/TicketQueue/TicketQueue';
 import ManagerVisuals from '../../components/ManagerVisuals/ManagerVisuals';
-// import { Route, Switch, Redirect } from 'react-router-dom';
 import './Dashboard.css';
 
 const Dashboard = (props) => {

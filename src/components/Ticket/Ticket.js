@@ -1,11 +1,10 @@
 import './Ticket.css';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Ticket = (props) => {
     const ticket = props.ticket;
     const engineerId = props.user._id;
-    console.log('engineer id here ' + engineerId);
     function priorityColor(priority) {
         switch (priority) {
             case 1: 
@@ -16,6 +15,8 @@ const Ticket = (props) => {
                 return '#fef99b';
             case 4: 
                 return '#b5d6a7';
+            default:
+                return '#fff';
         }
     }
 

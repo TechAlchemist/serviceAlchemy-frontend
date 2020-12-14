@@ -13,6 +13,8 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import CustomerOpenTicketsPage from './pages/CustomerPages/OpenTickets';
 import CustomerClosedTicketsPage from './pages/CustomerPages/ClosedTickets';
 import CustomerNewTicketPage from './pages/CustomerPages/NewTicket';
+import EngineerOpenTicketsPage from './pages/EngineerPages/EngineerOpenTickets';
+import EngineerClosedTicketsPage from './pages/EngineerPages/EngineerClosedTickets';
 
 
 
@@ -81,9 +83,8 @@ function App(props) {
         />
         <Route
           exact path="/dashboard/ticketDetails/:ticketId"
-          
           component={EngineerTickets}
-
+          
         />
         <Route
           exact path="/dashboard/closedTickets"
@@ -95,6 +96,20 @@ function App(props) {
           exact path="/dashboard/newTicket"
           render={(props) => (
             < CustomerNewTicketPage user={userState.user} {...props}/>
+          )}
+        />
+
+        <Route
+          exact path="/dashboard/engineersOpenTickets"
+          render={(props) => (
+            < EngineerOpenTicketsPage user={userState.user} {...props}/>
+          )}
+        />
+
+        <Route
+          exact path="/dashboard/engineersClosedTickets"
+          render={(props) => (
+            <EngineerClosedTicketsPage user={userState.user} {...props}/>
           )}
         />
         <Route component={NotFoundPage} />

@@ -25,7 +25,6 @@ function fetchMyTickets(userId) {
 }
 
 function fetchOpenTickets() {
-    console.log('fetchMyTickets from ticketService was called. ')
     const options = {
         method: 'GET'
       };
@@ -76,7 +75,38 @@ function claimTicket(engineerId, ticketId) {
         }),
        
     })
+}
 
+function getEngineersOpenTickets(engineerId) {
+    const options = {
+        method: 'GET',
+        headers: new Headers({engineerId: engineerId})
+      };
+      return fetch(BASE_URL + 'engineersOpenTickets', options).then(res => res.json());
+}
+
+function getEngineersClosedTickets(engineerId) {
+    const options = {
+        method: 'GET',
+        headers: new Headers({engineerId: engineerId})
+      };
+      return fetch(BASE_URL + 'engineersClosedTickets', options).then(res => res.json());
+}
+
+function engineerCloseTicket(ticketBody) {
+    return fetch(BASE_URL + 'closeTicket', {
+        method: 'POST',
+        headers: new Headers(
+        {
+            'Content-Type': 'application/json',
+        }),
+        body: JSON.stringify(ticketBody)
+    })
+    .then(res => {
+        if (res.ok) return res.json();
+
+        throw new Error('something went wrong in ticketService');
+    })
 }
 
 export {
@@ -86,6 +116,9 @@ export {
     deleteSingleTicket,
     updateSingleTicket,
     fetchOpenTickets,
-    claimTicket
+    claimTicket,
+    getEngineersOpenTickets,
+    engineerCloseTicket,
+    getEngineersClosedTickets
 };
 

@@ -7,16 +7,17 @@ import './OpenTickets.css';
 const CustomerOpenTickets = (props) => {
 
     const [tickets, setTickets] = useState([]);
-
+    // eslint-disable-next-line
     useEffect(() => {
         if (props.user) {
             getMyTickets();
         } 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.user] )
 
     async function getMyTickets() {
         const ticketData = await fetchMyTickets(props.user._id);
-            setTickets(ticketData);
+        setTickets(ticketData);
     }
 
     return (

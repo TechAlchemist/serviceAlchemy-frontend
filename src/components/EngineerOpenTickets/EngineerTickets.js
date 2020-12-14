@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import EngineerSideBar from '../../components/SideBars/EngineerSideBar';
 
 
-import Modal from '../Modal/DeleteTicketModal';
-
 const EngineerTicketDetails = (props) => {
 
     const engineerId = props.location.engineerId;
@@ -13,6 +11,7 @@ const EngineerTicketDetails = (props) => {
 
     useEffect(() => {
         getTicket()
+    // eslint-disable-next-line react-hooks/exhaustive-deps    
     }, [props.match.params.ticketId] )
 
     async function getTicket() {
@@ -37,6 +36,8 @@ const EngineerTicketDetails = (props) => {
                 return '#fef99b';
             case 4: 
                 return '#b5d6a7';
+            default: 
+                return '#fff';
         }
     }
 

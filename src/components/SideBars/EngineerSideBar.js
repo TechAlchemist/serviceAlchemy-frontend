@@ -15,9 +15,23 @@ const SideNav = (props) => {
       </div>
 
           <div className="card" id="nav-card">
-            <Link to='/dashboard/openTickets'>
+            <Link to='/dashboard'>
               {
-              props.active === 'openTickets' ?
+              props.active === 'dashboard' ?
+                <p id='active'>
+                  <img alt="active link" src={activeLinkSrc} />
+                  &nbsp;Dashboard 
+                </p>
+              :
+              <p> &nbsp;Dashboard </p>  
+              } 
+            </Link>
+          </div>
+
+          <div className="card" id="nav-card">
+            <Link to='/dashboard/engineersOpenTickets'>
+              {
+              props.active === 'engineersTickets' ?
                 <p id='active'>
                   <img alt="active link" src={activeLinkSrc} />
                   &nbsp;Current Tickets 
@@ -29,9 +43,9 @@ const SideNav = (props) => {
           </div>
 
           <div className="card" id="nav-card">
-          <Link to='/dashboard/closedTickets'>
+          <Link to='/dashboard/engineersClosedTickets'>
               {
-              props.active === 'closedTickets' ?
+              props.active === 'engineersClosedTickets' ?
                 <p id='active'>
                   <img alt='active link icon' src={activeLinkSrc}/>
                   &nbsp;Closed Tickets

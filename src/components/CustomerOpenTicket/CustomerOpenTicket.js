@@ -1,17 +1,16 @@
-// import { Link } from 'react-router-dom'
 import { fetchSingleTicket } from '../../services/ticketService';
 import { useState, useEffect } from "react";
 import CustomerSideBar from '../SideBars/CustomerSideBar';
 import Modal from '../Modal/DeleteTicketModal';
-import Ticket from '../Ticket/Ticket';
 
 
 const CustomerOpenTicket = (props) => {
 
     const [ticket, setTicket] = useState([]);
-
+    // eslint-disable-next-line
     useEffect(() => {
         getTicket()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.match.params.ticketId] )
 
     async function getTicket() {
@@ -29,6 +28,8 @@ const CustomerOpenTicket = (props) => {
                 return '#fef99b';
             case 4: 
                 return '#b5d6a7';
+            default:
+                return '#fff';
         }
     }
 
