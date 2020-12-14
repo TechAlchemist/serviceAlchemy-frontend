@@ -118,7 +118,6 @@ const CustomerNewTicket = (props) => {
                                 name="ticketPriority" 
                                 onChange={handleChange}>
                                     <option> - </option>
-                                    <option> 5 </option>
                                     <option> 4 </option>
                                     <option> 3 </option>
                                     <option> 2 </option>

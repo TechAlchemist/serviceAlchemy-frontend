@@ -5,4 +5,9 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Nanum Gothic Coding', monospace;
+  background-color: #212121;
+}
+
+a:hover {
+  color: #06d6c7;
 }

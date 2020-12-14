@@ -26,6 +26,7 @@ const CustomerOpenTicket = (props) => {
                     
                     {ticket && ticket.map((ticket, idx) => 
                             <div key={idx}> 
+                
                             <h1> {ticket.ticketTitle} </h1>
                             <br/> 
                             Ticket Type:{ticket.ticketType}---Priority:{ticket.ticketPriority}

@@ -1,3 +1,13 @@
-#active {
-    text-decoration: underline;
+
+
+#ticket-container {
+    height: 50vh;
+    overflow: auto;
+    /* padding: 50px; */
+}
+
+#title {
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
