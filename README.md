@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Welcome To Service Alchemy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Service Alchemy is an IT Service and Customer Relationship Management tool built in the MERN stack as a learning project. 
 
-## Available Scripts
+### Project Management
 
-In the project directory, you can run:
+[Trello Board](https://trello.com/b/fhqKDr88/project3)
 
-### `npm start`
+### Wireframes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+These wireframes guided the inital construction of the site.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Customer Facing Dashboard](./screenshots/customerWireframe.png)
 
-### `npm test`
+![Technical Facing Dashboard](./screenshots/techWireframe.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### The Entity Relationship Diagram 
 
-### `npm run build`
+![ERD](./screenshots/erd.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![homepage](./screenshots/homepage.png)
 
-### `npm run eject`
+![ticket queue](./screenshots/ticketQueue.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![deleteTicket](./screenshots/deleteTicket.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![homepage](./screenshots/surveys.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Technologies Used
 
-## Learn More
+- MongoDB
+- Express 
+- React
+- NodeJS
+- AJAX
+- BOOTSTRAP 4
+- Heroku
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project is pretty straight forward to get started. Clone this repo and travel to the same directory as the package.json file. Once there enter the `npm i` command in the terminal.
+You'll need to traverse over to the services folder and change all the BASE_URLS to development environment addresses. These are most commonly http://localhost:3000 for frontend and http://localhost:3001 .
+Once those are changed start the frontend development environment by typing `npm start`. Make sure you setup the backend before you try experimenting with the front.  
 
-### Code Splitting
+## Unsolved Problems
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I still need to add authentication differences for Customers accessing the support dashboard and vice versa.
 
-### Analyzing the Bundle Size
+The update ticket function does not pre-populate with the old information and I would like it to.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Enhancements
 
-### Making a Progressive Web App
+ - Implement socket.io for real time chat between engineers and customers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ - Email interface that is tracks communication between customer and tech on tickets.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - Add a manager dashboard to manage techs and visualize productivity.
