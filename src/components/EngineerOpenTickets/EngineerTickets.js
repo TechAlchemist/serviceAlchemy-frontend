@@ -79,11 +79,6 @@ const EngineerTicketDetails = (props) => {
                             </div>
                         </div>
 
-
-
-
-
-     
                         )}
                 </div>
              </div>

@@ -31,6 +31,15 @@ function fetchOpenTickets() {
       return fetch(BASE_URL + 'openTickets', options).then(res => res.json());
 }
 
+
+function fetchMyClosedTickets(userId) {
+    const options = {
+        method: 'GET',
+        headers: new Headers({userId: userId})
+      };
+      return fetch(BASE_URL + 'closedTickets', options).then(res => res.json());
+}
+
 function fetchSingleTicket(ticketId) {
     const options = {
         method: 'GET',
@@ -109,6 +118,23 @@ function engineerCloseTicket(ticketBody) {
     })
 }
 
+function submitSatisfactionSurvey(ticketBody) {
+    console.log(ticketBody)
+    return fetch(BASE_URL + 'satisfactionSurvey', {
+        method: 'POST',
+        headers: new Headers(
+        {
+            'Content-Type': 'application/json',
+        }),
+        body: JSON.stringify(ticketBody)
+    })
+    .then(res => {
+        if (res.ok) return res.json();
+
+        throw new Error('something went wrong in ticketService');
+    })
+}
+
 export {
     submitTicket,
     fetchMyTickets,
@@ -119,6 +145,8 @@ export {
     claimTicket,
     getEngineersOpenTickets,
     engineerCloseTicket,
-    getEngineersClosedTickets
+    getEngineersClosedTickets,
+    fetchMyClosedTickets,
+    submitSatisfactionSurvey
 };
 

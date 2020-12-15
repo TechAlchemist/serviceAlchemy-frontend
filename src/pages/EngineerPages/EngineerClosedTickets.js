@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const EngineerOpenTicketsPage = (props) => {
 
-    const user = props.user;
+    // const user = props.user;
     const [tickets, setTickets] = useState([]);
 
     useEffect(() => {
