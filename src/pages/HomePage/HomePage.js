@@ -15,7 +15,6 @@ const HomePage = (props) => {
                             Is your computer slow? Can't send an email? Spill water on your laptop and then 'accidentally' drop it in the mud? Good! Service Alchemy is your medium to get help from your companies IT Services. Your companies IT Services wants to help you as best they can. We want to help them do it. Service Alchemy exists to transmute lackluster customer service into cutting edge, easy to use MAGIC! 
                         </h4>
                         <br/>
-                        <button className="btn btn-default btn-lg">Register Now</button>
                     </div>
                     <div className="col-sm-4">
                         <img 
@@ -64,7 +63,7 @@ const HomePage = (props) => {
                             <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
                             <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
                             <img alt='star' src="https://img.icons8.com/ios-glyphs/30/000000/star.png"/>
-
+                            <br />
                             <em> 5 of 5 </em>
                         </div>
                     </div>

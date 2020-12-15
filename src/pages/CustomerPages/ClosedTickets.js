@@ -66,6 +66,10 @@ const CustomerClosedTickets = (props) => {
                                     <div className="card-body">
                                         <h5 className="card-title">{ticket.ticketTitle} </h5>
                                         <p className="card-text">{ticket.ticketDescription}</p>
+                                        <br/>
+                                        <hr/>
+                                        <p> Engineer's Notes: </p>
+                                        <p className="card-text">{ticket.closeDescription}</p>
                                         {ticket.satisfactionSubmitted ? <p><strong> Survey Already Submitted </strong>  </p> : ''}
                                         <footer className="blockquote-footer">Created: <cite title="Source Title"> {new Date(ticket.createdAt).toLocaleDateString()} </cite></footer>
                                         {ticket.satisfactionSubmitted ? 

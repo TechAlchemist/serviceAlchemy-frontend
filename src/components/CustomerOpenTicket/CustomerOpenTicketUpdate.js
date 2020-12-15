@@ -114,6 +114,7 @@ const CustomerOpenTicket = (props) => {
                                             </textarea>
                                         </div>
 
+                                        <br/>
                                         {/* SUBMIT BUTTON */}
                                         <div className="form-group">
                                             <div className="col-sm-12">

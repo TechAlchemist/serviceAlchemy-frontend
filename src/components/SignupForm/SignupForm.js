@@ -41,6 +41,7 @@ function SignupForm (props) {
   }
     return (
       <div className='container'>
+        <h1> Sign Up</h1>
         <form className="form-horizontal" onSubmit={handleSubmit} >
 
           {/* FIRST AND LAST NAME SAME ROW */}

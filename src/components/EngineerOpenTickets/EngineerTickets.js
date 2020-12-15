@@ -1,9 +1,12 @@
 import { fetchSingleTicket, claimTicket } from '../../services/ticketService';
 import { useState, useEffect } from "react";
 import EngineerSideBar from '../../components/SideBars/EngineerSideBar';
+import { useHistory } from 'react-router-dom';
 
 
 const EngineerTicketDetails = (props) => {
+
+    const history = useHistory();
 
     const engineerId = props.location.engineerId;
 
@@ -46,6 +49,7 @@ const EngineerTicketDetails = (props) => {
             console.error('Undefined Error in submission. ');
         }
         else {
+            history.push('/dashboard');
             await claimTicket(engineerId, ticket[0]._id);
         }
     }
@@ -75,7 +79,8 @@ const EngineerTicketDetails = (props) => {
                                 <p className="card-text">{ticket.ticketDescription}</p>
                                 <p className="card-text">{`- From ${ticket.ticketCreatorName} in ${ticket.ticketCreatorBusinessUnit}`}</p>
                                 <footer className="blockquote-footer">Created: <cite title="Source Title"> {new Date(ticket.createdAt).toLocaleDateString()} </cite></footer>
-                                <button disabled={areHeadersValid()} onClick={handleClaimSubmit}>Take Ticket</button>
+                                <br/>
+                                <button disabled={areHeadersValid()} onClick={handleClaimSubmit} className='btn' >Take Ticket</button>
                             </div>
                         </div>
 

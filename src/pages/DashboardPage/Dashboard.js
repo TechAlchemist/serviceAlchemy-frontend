@@ -23,10 +23,10 @@ const Dashboard = (props) => {
 
     function sideBarLevel() {
         if (props.user.authLevel === 'customer') {
-            return <CustomerSideBar />
+            return <CustomerSideBar active={'dashboard'}/>
         }
         else if (props.user.authLevel === 'engineer') {
-            return <EngineerSideBar />
+            return <EngineerSideBar active={'dashboard'}/>
         }
     }
 

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 const EngineerSurveys = (props) => {
 
+    
     // const user = props.user;
     const [tickets, setTickets] = useState([]);
 
@@ -45,7 +46,7 @@ const EngineerSurveys = (props) => {
         <div className="container-fluid">
 
             <div className="row">   
-            <EngineerSideBar active={'engineersTickets'} />
+            <EngineerSideBar active={'surveys'} />
             <div className="container">
 
                 <div className="col-sm-9">

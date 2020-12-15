@@ -12,6 +12,9 @@ const Nav = (props) => {
           {`${user.firstName} ${user.lastName} \n ${user.businessUnit}`}
         </li>
         <li className="nav-item">
+        <Link to='/dashboard'> Dashboard </Link>
+        </li>
+        <li className="nav-item">
           <Link to='' onClick={props.handleLogout} > Logout </Link>
         </li>
       </ul>

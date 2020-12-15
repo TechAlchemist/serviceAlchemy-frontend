@@ -16,6 +16,9 @@
 .testimony-content {
     margin-bottom: 100px;
 }
+.testimony-content p {
+    color: black;
+}
 .testimony {
     margin: 20px;
 }

@@ -9,10 +9,7 @@ const SideNav = (props) => {
   return (
     // <>
     <div className="col-sm-3" id="sidebar">
-      
-      <div className="card" id="nav-card">
-        <p> SLA STATUS </p>
-      </div>
+    
 
           <div className="card" id="nav-card">
             <Link to='/dashboard'>

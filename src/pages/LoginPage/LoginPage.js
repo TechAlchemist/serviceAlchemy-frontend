@@ -35,26 +35,49 @@ export default function LoginPage(props) {
 
     return (
         <main className="Page">
-            <h1>LoginPage</h1>
+            <div className="container">
+
+            <h1>Login</h1>
+
             <form onSubmit={handleSubmit}>
+            <div className="col-sm-12">
                 <div className="form-group">
-                    <div className="col-sm-12">
-                        <input onChange={handleChange} value={formState.email} name="email" placeholder="Email" className="form-control" type="email"/>
-                    </div>
+                    <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">
+                            <img alt='login logo' src="https://img.icons8.com/wired/64/000000/login-rounded-right.png" style={{width: 25}} />
+                            </span>
+                            <input onChange={handleChange} value={formState.email} name="email" placeholder="Email" className="form-control" type="email"/>
+                        </div>
+                   
                 </div>
-                <div className="form-group">
-                    <div className="col-sm-12">
+            </div>
+
+            <div className="col-sm-12">
+                <div className="form-group">            
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <img alt='login logo' src="https://img.icons8.com/ios/50/000000/forgot-password.png" style={{width: 25}} />
+                        </span>
                         <input onChange={handleChange} value={formState.password} name="password" placeholder="Password" className="form-control" type="password"/>
                     </div>
                 </div>
-                <div className="form-group">
-                    <div className="col-sm-12">
-                        <input disabled={!formValid()} value="Login" className="form-control" type="submit"/>
-                        &nbsp;&nbsp;
-                        <Link to="/">Cancel</Link>
-                    </div>
+            </div>
+
+            <div className="form-group">
+                <div className="col-sm-12 text-center">
+                    <button 
+                        disabled={!formValid()} 
+                        value="Login" 
+                        className="btn">
+                        Login
+                    </button>
+                    &nbsp;&nbsp;
+                    <Link to="/">Cancel</Link>
                 </div>
+            </div>
+
             </form>
+            </div>
         </main>
     );
 };
