@@ -60,3 +60,8 @@ The update ticket function does not pre-populate with the old information and I 
  - Email interface that is tracks communication between customer and tech on tickets.
 
  - Add a manager dashboard to manage techs and visualize productivity.
+
+ 
+# TRY ME OUT!!!
+
+[Deploy](https://crm-service-alchemy.herokuapp.com/)
