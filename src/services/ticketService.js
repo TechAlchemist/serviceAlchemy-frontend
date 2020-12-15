@@ -94,6 +94,14 @@ function getEngineersOpenTickets(engineerId) {
       return fetch(BASE_URL + 'engineersOpenTickets', options).then(res => res.json());
 }
 
+function getTicketSurveyResults(engineerId) {
+    const options = {
+        method: 'GET',
+        headers: new Headers({engineerId: engineerId})
+      };
+      return fetch(BASE_URL + 'survey', options).then(res => res.json());
+}
+
 function getEngineersClosedTickets(engineerId) {
     const options = {
         method: 'GET',
@@ -147,6 +155,7 @@ export {
     engineerCloseTicket,
     getEngineersClosedTickets,
     fetchMyClosedTickets,
-    submitSatisfactionSurvey
+    submitSatisfactionSurvey,
+    getTicketSurveyResults
 };
 

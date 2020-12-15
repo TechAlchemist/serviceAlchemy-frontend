@@ -54,24 +54,35 @@ const CustomerClosedTickets = (props) => {
                     <h1 id="title"> Customer Closed Tickets </h1>
                         <div className="container" id="ticket-container">
                             {tickets && tickets.map((ticket, idx) => 
+          
                                 <div className="card" id="card" key={idx}>
                                     <div className="card-header" style={{backgroundColor: priorityColor(ticket.ticketPriority)}}>
                                         <h4>
                                         <img src={ticketTypeLogo(ticket.ticketType)} alt='ticket type logo' style={{width: 30}} />
                                             <strong> {ticket.ticketType} </strong> 
+                                            
                                         </h4> 
                                     </div>
                                     <div className="card-body">
-                                        <h5 className="card-title">{ticket.ticketTitle}</h5>
+                                        <h5 className="card-title">{ticket.ticketTitle} </h5>
                                         <p className="card-text">{ticket.ticketDescription}</p>
-                                       
+                                        {ticket.satisfactionSubmitted ? <p><strong> Survey Already Submitted </strong>  </p> : ''}
                                         <footer className="blockquote-footer">Created: <cite title="Source Title"> {new Date(ticket.createdAt).toLocaleDateString()} </cite></footer>
+                                        {ticket.satisfactionSubmitted ? 
+                                        <button  
+                                            className="btn"
+                                            disabled={true}>
+                                            Take Survey 
+                                         </button>
+                                        :
                                         <button  
                                             className="btn"
                                             data-toggle="modal" 
                                             data-target="#submitSurvey"> 
                                             Take Survey 
                                         </button>
+                                        
+                                        }
                                         <SurveyTicketModal 
                                             modalId={'submitSurvey'}
                                             user={user}

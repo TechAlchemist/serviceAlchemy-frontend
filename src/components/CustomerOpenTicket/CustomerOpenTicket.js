@@ -58,11 +58,14 @@ const CustomerOpenTicket = (props) => {
                                     </div>
                                     <div className="card-body">
                                         <h5 className="card-title">{ticket.ticketTitle}</h5>
-                                        <p className="card-text"></p>
+                                        <p className="card-text">{ticket.ticketDescription}</p>
                                         <footer className="blockquote-footer">Created: <cite title="Source Title"> {new Date(ticket.createdAt).toLocaleDateString()} </cite></footer>
+                                        <br/>
                                         <button  
                                             data-toggle="modal" 
-                                            data-target="#openTicket"> 
+                                            data-target="#openTicket"
+                                            className="btn"
+                                            > 
                                             Delete 
                                         </button>
                                         <Modal 

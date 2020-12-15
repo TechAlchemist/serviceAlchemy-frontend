@@ -64,13 +64,13 @@ const CustomerNewTicket = (props) => {
 
                 <div className="col-sm-9">
                     <h1> Customer New Ticket </h1>
-                    <div className='container'>
+                    <div className='container' >
 
                         <form className="form-horizontal" onSubmit={handleSubmit} >
                             {/* TICKET TITLE */}
                             <div className="form-group">
                                 <div className="col-sm-12">
-                                    Give your ticket a brief title.
+                                  <p> Give your ticket a brief title. </p>  
                                 <input type="text" 
                                 className="form-control" 
                                 placeholder="Ticket Title" 
@@ -83,7 +83,7 @@ const CustomerNewTicket = (props) => {
                             {/* TICKET TYPE */}
                             <div className="form-group">
                                 <div className="col-sm-12">
-                                    Select your ticket type. If something broke choose Incident. If you need something, <em>( eq. new laptop )</em> choose service request. 
+                                  <p>   Select your ticket type. If something broke choose Incident. If you need something, <em>( eq. new laptop )</em> choose service request. </p>
                                 <select 
                                 className="form-control" 
                                 value={formState.ticketType} 
@@ -99,7 +99,7 @@ const CustomerNewTicket = (props) => {
                             {/* TICKET DESCRIPTION */}
                             <div className="form-group">
                                 <div className="col-sm-12">
-                                    Give us a detailed description of the problem/request. The more details and accurate descriptions helps with fast incident resolution.
+                                 <p> Give us a detailed description of the problem/request. The more details and accurate descriptions helps with faster resolution. </p>  
                                 <textarea 
                                 className="form-control"  
                                 rows="3"
@@ -114,7 +114,7 @@ const CustomerNewTicket = (props) => {
                             {/* TICKET PRIORITY */}
                             <div className="form-group">
                                 <div className="col-sm-12">
-                                    How dire is this? 5 is Not Important - 1 is A Server Exploded!
+                                  <p>   How dire is this? 4 is Not Important - 1 is A Server Exploded! </p>
                                 <select 
                                 className="form-control" 
                                 value={formState.ticketPriority} 

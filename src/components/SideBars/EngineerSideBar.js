@@ -57,9 +57,9 @@ const SideNav = (props) => {
           </div>
 
           <div className="card" id="nav-card">
-          <Link to='/dashboard/newTicket'>
+          <Link to='/dashboard/surveys'>
               {
-              props.active === 'newTicket' ?
+              props.active === 'surveys' ?
                 <p id='active'>
                   <img alt='active link icon' src={activeLinkSrc}/>
                   &nbsp;Satisfaction Surveys 

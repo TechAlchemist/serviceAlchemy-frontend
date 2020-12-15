@@ -15,13 +15,11 @@ import CustomerClosedTicketsPage from './pages/CustomerPages/ClosedTickets';
 import CustomerNewTicketPage from './pages/CustomerPages/NewTicket';
 import EngineerOpenTicketsPage from './pages/EngineerPages/EngineerOpenTickets';
 import EngineerClosedTicketsPage from './pages/EngineerPages/EngineerClosedTickets';
-
+import EngineerSurveys from './pages/EngineerPages/EngineerSurveys';
 
 
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
-
 import { getUser, logout } from "./services/userService";
-
 import "./App.css";
 
 function App(props) {
@@ -112,6 +110,14 @@ function App(props) {
             <EngineerClosedTicketsPage user={userState.user} {...props}/>
           )}
         />
+
+        <Route
+          exact path="/dashboard/surveys"
+          render={(props) => (
+            <EngineerSurveys user={userState.user} {...props}/>
+          )}
+        />
+
         <Route component={NotFoundPage} />
 
       </Switch>
