@@ -82,13 +82,13 @@ const CustomerClosedTickets = (props) => {
                                         <button  
                                             className="btn"
                                             data-toggle="modal" 
-                                            data-target="#submitSurvey"> 
+                                            data-target={'#' + ticket._id}> 
                                             Take Survey 
                                         </button>
                                         
                                         }
                                         <SurveyTicketModal 
-                                            modalId={'submitSurvey'}
+                                            modalId={ticket._id}
                                             user={user}
                                             ticket={ticket}
                                         />
