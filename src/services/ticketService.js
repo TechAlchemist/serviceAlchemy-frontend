@@ -1,5 +1,5 @@
 // import { getToken } from './tokenService';
-const BASE_URL = 'http://localhost:3001/api/tickets/';
+const BASE_URL = 'https://service-alchemy.herokuapp.com/api/tickets/';
 
 
 
